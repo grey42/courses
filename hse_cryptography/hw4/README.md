@@ -8,8 +8,8 @@
 
 ## Сборка
 ```
-gcc -lcrypto -o rsa_gen rsa_lab1.c
-./rsa_gen
+gcc -lcrypto -o rsa_hw rsa_hw.c
+./rsa_hw
 ```
 
 # Задание 2
