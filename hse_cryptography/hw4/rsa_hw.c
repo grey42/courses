@@ -7,6 +7,7 @@ static int get_random_data(unsigned char* data, size_t length)
 	int fp = open("/dev/urandom", O_RDONLY);
 	if (fp < 0) return -1;
 	if (length != read(fp, data, length)) {close(fp); return -1;}
+	data[0] = 0; // установим старший байт в ноль, чтобы гарантированно получить число, которое будет меньше модуля
 	close (fp);
 	return 0;
 }
